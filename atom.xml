@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+  <title><![CDATA[Gavin's Blog]]></title>
+  <subtitle><![CDATA[Think More! Write Less!]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://gavin1994.github.io//"/>
+  <updated>2015-07-22T15:16:42.000Z</updated>
+  <id>http://gavin1994.github.io//</id>
+  
+  <author>
+    <name><![CDATA[Gavin]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[first blog]]></title>
+    <link href="http://gavin1994.github.io/2015/07/22/first-blog/"/>
+    <id>http://gavin1994.github.io/2015/07/22/first-blog/</id>
+    <published>2015-07-22T15:11:19.000Z</published>
+    <updated>2015-07-22T15:16:42.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>let’s start blog trip!</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"fisrt blog"</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>let’s start blog trip!</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="li]]>
+    </summary>
+    
+      <category term="随笔" scheme="http://gavin1994.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
