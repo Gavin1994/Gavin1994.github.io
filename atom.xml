@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Think More! Write Less!]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://gavin1994.github.io//"/>
-  <updated>2015-07-22T15:16:42.000Z</updated>
+  <updated>2015-07-26T16:10:11.000Z</updated>
   <id>http://gavin1994.github.io//</id>
   
   <author>
@@ -16,11 +16,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Java最大的优势真的在于跨平台吗？]]></title>
+    <link href="http://gavin1994.github.io/2015/07/27/Java%E6%9C%80%E5%A4%A7%E7%9A%84%E4%BC%98%E5%8A%BF%E7%9C%9F%E7%9A%84%E5%9C%A8%E4%BA%8E%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%90%97%EF%BC%9F/"/>
+    <id>http://gavin1994.github.io/2015/07/27/Java最大的优势真的在于跨平台吗？/</id>
+    <published>2015-07-26T16:08:24.000Z</published>
+    <updated>2015-07-26T16:10:11.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="以下讨论只针对PC端和移动端"><strong>以下讨论只针对PC端和移动端</strong></h4><blockquote>
+<p><strong>Java最大的优势真的在于跨平台吗？以前是，但现在已经不是了。</strong><br><a id="more"></a><br>有跨平台需求的仅仅是客户端应用，而不是服务端。例如桌面应用，你的客户可能是Windows用户，也可能是Linux用户，这时候如果不想多投入成本对各个平台进行适配，那么Java所谓的”Write once, run everywhere”就显得异常光彩。然而今天，整个软件世界都在向B/S应用倾倒(嵌入式除外)，即使要做客户端跨平台，QT等第三方框架远远比Swing更强大，Java在桌面应用领域基本被淘汰已经是不争的事实了，而当初Java引以为豪的Applet也早已销声匿迹。如果说客户端Java还有一点优秀的话，那只有Android了。Android最初确实靠JVM屏蔽了不同硬件设备之间的区别并取得了巨大的成功，但在今天，Android L中ART模式的出现也即将颠覆这一情况，况且Google还可能会想用自家的Go语言取代Java成为Android平台的第一语言。<strong>所以在客户端，Java几乎完败。</strong></p>
+</blockquote>
+<p>服务端应用不需要跨平台。做一个Web服务器，我想没有哪家公司今天用Linux，下个月就换Windows吧？如果仅仅是更换Linux发行版，如从Debian到Fedora，本质上讲其Linux内核是不变的，因此像C++这样纯编译类型的语言已经没什么问题。如果做游戏服务器，我想几乎都会选择Linux而不是Win平台。Java的跨平台优势的实用性其实已经被大大弱化了，可以说在实际应用中并不明显，在一般情况下几乎感知不出Java还能跨平台这个特性。作为三大商用JVM之一的JRockets是只有编译器的JVM，即应用启动时会将字节码全部编译为本地机器码，这其实就很大程度上摒弃了跨平台，而追求性能。</p>
+<hr>
+<h4 id="今天，Java最大的优势在于其庞大而完善的生态系统"><strong>今天，Java最大的优势在于其庞大而完善的生态系统</strong></h4><blockquote>
+<p>一门编程语言是否能流行，主要是由其 <strong>生态系统</strong>决定的</p>
+</blockquote>
+<p><strong>Java生态系统的完善性主要体现在以下几个方面：</strong></p>
+<ul>
+<li><p>Java拥有世界上数量最多的程序员。你说他们是农民也好，但数量放在那里，最明显的效果就是公司招人的时候会比较容易地招到Java程序员。试想如果你想要做一套软件，你有一个很棒的技术方案需要用C++，Scala或Ruby等语言实现，但招不到足够的人手，那么计划多半泡汤。这时候你的应用Java也能做到，并且很轻松就能招到足够的人，那么你选择Java的可能性就要大一些。</p>
+</li>
+<li><p>Java拥有大量的第三方类库。假如你想解析HTML，用C/C++这类语言恐怕多半只能自己编写解析算法库了，而如果是Java，你可以非常轻松地在Github上找到JSoup，使用Maven导入依赖后分分钟就搞定HTML。为此还有一句讽刺Java的话是：“我们不生产代码，我们只是Github的搬运工。”这句话从字面上看是很有道理的，但却忽略了对软件生产效率的提升所带来的巨大价值。对于软件的开发，公司的唯一成本其实就是“人头费”，每减少一个月开发时间，就能帮助公司节省几十万几千万的研发成本。</p>
+</li>
+<li><p>Java拥有功能强大的IDE。 Eclipse，通过插件几乎可以满足你开发的任何需求。它虽然有些慢，但你可以通过JVM调优来提高程序的流畅度，千万不要使用默认的JVM参数。不过，IntelliJ Idea已经完全超越Eclipse了，Idea的智能程度几乎可以媲美Win平台下的VS。我是那类离了Vim就活不下去的人，在这两款IDE中都有Vim插件从而让我愉快地存活下去。</p>
+</li>
+<li><p>Java拥有很多杀手级应用。 不必多说，Spring, Struts, Hibernate, Hadoop, Tomcat, JBoss等等。</p>
+</li>
+<li><p>Java的语法特性很少。对，这也是一项优点。C++相比C添加了大量特性，学起来费事不说，用起来还会降低代码可读性，其实是费了工夫不讨好。当今世界对编程语言的要求是语法简单，代码可读，对性能已经是退而求其次了，因此才诞生了Python, Ruby这样的编程语言。有很多人批评Java语法写起来很臃肿，我承认这一点，但事实是，编程语言从来都不是因为语法臃肿而被淘汰的，决定其生死的是生态系统。对于批评者，引用知乎的一句话：”动态类型一时爽，代码重构火葬场”</p>
+</li>
+<li><p>Java的性能已经足够高了。 Sun/Oracle的HotSpot JVM内置的JIT编译器在运行时对字节码已经做出了非常大的优化努力，服务端应用启动后对JVM进行足够的”预热”，并给出合理的启动参数即可。如果不是对性能十分敏感的系统类应用，Java已经足够快了。有一种简单可行的方法可以形象地看出这点，在JVM启动参数中添加+XX:PrintCompilation可以看到JIT编译器的忙碌。当今世界对软件的需求量越来越大，在性能可接受的情况下，开发效率才是第一位的，这也是Python这类动态脚本语言流行的主要原因。</p>
+</li>
+</ul>
+<p>以上仅做客观分析，并不想引起语言战争。毕竟，没有最好的语言，只有最适合某种项目的语言。引用黑格尔的一句话：”<strong>存在即合理</strong>。”</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="以下讨论只针对PC端和移动端"><strong>以下讨论只针对PC端和移动端</strong></h4><blockquote>
+<p><strong>Java最大的优势真的在于跨平台吗？以前是，但现在已经不是了。</strong><br>]]>
+    
+    </summary>
+    
+      <category term="java" scheme="http://gavin1994.github.io/tags/java/"/>
+    
+      <category term="跨平台" scheme="http://gavin1994.github.io/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[markdown常用语法]]></title>
+    <link href="http://gavin1994.github.io/2015/07/26/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
+    <id>http://gavin1994.github.io/2015/07/26/markdown常用语法/</id>
+    <published>2015-07-26T15:22:16.000Z</published>
+    <updated>2015-07-26T15:35:23.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="markdown语法总结"><strong>markdown语法总结</strong></h3><blockquote>
+<p>现如今，<strong>markdown</strong>已经很流行了，身在<strong>互联网圈子</strong>内，不会用markdown来写东西就太low了，在这个圈子里，就要时刻提升自己的逼格，~渍渍渍~，话不多说啦，介绍一下markdown最常用的语法吧！<br><a id="more"></a></p>
+<h4 id="1-_最常用"><strong>1. 最常用</strong></h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(1)空一行（两个回车）：表示分段</span><br><span class="line">(2)行末加两个或多个空格：表示换行（回车就像在 HTML 代码中一样，被当作空格处理）</span><br><span class="line">(3)插入链接： [<span class="link_label">链接文字</span>](<span class="link_url">url</span>)</span><br><span class="line">如:[<span class="link_label">百度</span>](<span class="link_url">http://www.baidu.com</span>)</span><br><span class="line">(4)图片：![<span class="link_label">alt 文字</span>](<span class="link_url">图片 URL</span>)</span><br><span class="line">(5)缩进：在文字开头输入&amp;#160;  然后紧跟着输入文本即可(分号不要丢)</span><br><span class="line">注：段落和换行的区别：段落在生成的 HTML 代码中被一对 <span class="xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span> 标签包含起来，而换行只是插入了一个 <span class="xml"><span class="tag">&lt;<span class="title">br</span>/&gt;</span></span> 标签。</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="2-_标题"><strong>2. 标题</strong></h4><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">用 <span class="number">1</span>-<span class="number">6</span> 个井号 (#) 开始一行表示这一行是标题，如：</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 一级标题</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## 二级标题</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">### 三级标题</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#### 四级标题</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">##### 五极标题</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">###### 六级标题</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-_块引用（blockquote）"><strong>3. 块引用（blockquote）</strong></h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用右尖括号 &gt; 表示 <span class="keyword">blockquote，&gt; </span>可以嵌套，也可以包含其它的 <span class="keyword">Markdown </span>元素</span><br></pre></td></tr></table></figure>
+<h4 id="4-_列表"><strong>4. 列表</strong></h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">HTML 列表分无序列表 (ul) 和有序列表 (ol) ，在 Markdown 中用*、+、- 开始一行表示无序列表，用数字开始一行表示有序列表。如：</span><br><span class="line"><span class="bullet">* </span>789</span><br><span class="line"><span class="bullet">* </span>456</span><br><span class="line"><span class="bullet">* </span>123</span><br><span class="line"><span class="bullet">1. </span>哈哈哈</span><br><span class="line"><span class="bullet">2. </span>哈哈哈</span><br><span class="line"><span class="bullet">3. </span>哈哈哈</span><br><span class="line">注：符号和文字之间一定要有空格</span><br></pre></td></tr></table></figure>
+<h4 id="5-_代码及代码块"><strong>5. 代码及代码块</strong></h4><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">(1)</span>若想在文字中插入代码或代码块，把代码用 <span class="comment">(`)</span> 符号 <span class="comment">(这个符号在键盘左上角，1 的左边，Tab 的上面)</span> 包围起来即可。</span><br><span class="line"><span class="comment">(2)</span>若想插入一大段代码也很简单，在代码的每一行之前加四个空格即可。</span><br></pre></td></tr></table></figure>
+<h4 id="6-_横线"><strong>6. 横线</strong></h4><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">3个或以上 <span class="keyword">*</span>、-  或下划线单独放在一行即可生成一条横线 (html中的hr)。 如：</span><br><span class="line"></span><br><span class="line"><span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"></span><br><span class="line">- - -</span><br></pre></td></tr></table></figure>
+<h4 id="7-_强调">7. 强调</h4><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">用 <span class="keyword">*</span> 或下划线来实现强调文字的作用。文字两边分别放一个 <span class="keyword">*</span> 或 _ 会生成html中的 em 标签，放两个则生成 html中的strong 标签。如：</span><br><span class="line"></span><br><span class="line"><span class="keyword">*</span>单星号<span class="keyword">*</span></span><br><span class="line"></span><br><span class="line">_单下划线_</span><br><span class="line"></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>双星号<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"></span><br><span class="line">__双下划线__</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="markdown语法总结"><strong>markdown语法总结</strong></h3><blockquote>
+<p>现如今，<strong>markdown</strong>已经很流行了，身在<strong>互联网圈子</strong>内，不会用markdown来写东西就太low了，在这个圈子里，就要时刻提升自己的逼格，~渍渍渍~，话不多说啦，介绍一下markdown最常用的语法吧！<br>]]>
+    
+    </summary>
+    
+      <category term="markdown" scheme="http://gavin1994.github.io/tags/markdown/"/>
+    
+      <category term="原创" scheme="http://gavin1994.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[first blog]]></title>
     <link href="http://gavin1994.github.io/2015/07/22/first-blog/"/>
     <id>http://gavin1994.github.io/2015/07/22/first-blog/</id>
     <published>2015-07-22T15:11:19.000Z</published>
-    <updated>2015-07-22T15:16:42.000Z</updated>
+    <updated>2015-07-26T15:35:35.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>let’s start blog trip!</p>
 </blockquote>
@@ -32,6 +104,8 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="li]]>
     </summary>
+    
+      <category term="原创" scheme="http://gavin1994.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="随笔" scheme="http://gavin1994.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
